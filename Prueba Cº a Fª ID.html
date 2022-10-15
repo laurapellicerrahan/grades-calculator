@@ -3,43 +3,43 @@
 <html>
 
 <head>
-<title>Convertidor de Grados Centígrados (Cº) a Kelvin (K)</title>
+    <title>Convertidor de Grados Centígrados (Cº) a Kelvin (K)</title>
 
-<script>
-    function validateInput(){
-    let inputC = document.getElementById("inputc")
-    let inputK = document.getElementById("inputk")
+    <script>
+        function validateInput() {
+            let inputC = document.getElementById("inputc")
+            let inputK = document.getElementById("inputk")
 
-    if ((inputC.value=="")&&(inputK.value=="")) {
-        alert("Debes rellenar un campo");
-        return false;
-    }
+            if ((inputC.value == "") && (inputK.value == "")) {
+                alert("Debes rellenar un campo");
+                return false;
+            }
 
-    if ((inputC.value!=="")&&(inputK.value!=="")){
-        alert("Debes dejar un campo vacío");
-        return false;
-    }
+            if ((inputC.value !== "") && (inputK.value !== "")) {
+                alert("Debes dejar un campo vacío");
+                return false;
+            }
 
-    if ((inputC.value=="")&&(inputK.value!=="")){
-        return inputC.value = (parseFloat(inputK.value)-273.15).toFixed(2);
-    
-    }
+            if ((inputC.value == "") && (inputK.value !== "")) {
+                return inputC.value = (parseFloat(inputK.value) - 273.15).toFixed(2);
 
-    if ((inputK.value=="")&&(inputC.value!=="")){
-        return inputK.value = (parseFloat(inputC.value)+273.15).toFixed(2);
-    }
+            }
 
-    return true
-}
-</script>
+            if ((inputK.value == "") && (inputC.value !== "")) {
+                return inputK.value = (parseFloat(inputC.value) + 273.15).toFixed(2);
+            }
+
+            return true
+        }
+    </script>
 </head>
 
 <body>
 
     <h1>Convertidor de Grados Centígrados (Cº) a Kelvin (K)</h1>
-        <p>Grados Cº <input type="number" id="inputc" value=""/></p>
-        <p>Grados K <input type="number" id="inputk" value=""/></p>
-        <button onclick="return validateInput()">Enviar</button>
+    <p>Grados Cº <input type="number" id="inputc" value="" /></p>
+    <p>Grados K <input type="number" id="inputk" value="" /></p>
+    <button onclick="return validateInput()">Enviar</button>
 
 </body>
 
